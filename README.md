@@ -14,9 +14,8 @@ Bonus - Caso queira ver seu banco de dados sqlite dentro do próprio Vs Code, ut
 AVISO: Utilize algum software que faça requisições HTTP, pois essa API não possui Front-End. Como o imsomnia ou postman
 
 
-Isso é um exemplo de objeto no banco de dados dessa API:
+Isso é um exemplo de objeto no banco de dados dessa API(JSON):
 
-{
     
     "id": “number primary key”, // Ele auto-incrementa conforme mais um objeto é gerado
     
@@ -28,7 +27,6 @@ Isso é um exemplo de objeto no banco de dados dessa API:
    
     "content": "string"
     
-}
 
 
 1 - 
@@ -42,9 +40,8 @@ return: retorna todos os items do banco de dados em JSONs
 
 POST - "{hostUrl}/careers"
 
-requisição:
+requisição(JSON):
 
-{
 
 		"username": "string",
   
@@ -52,7 +49,6 @@ requisição:
   
 		"content": "string"
   
-}
 
 ao enviar esse JSON, ele é armazenado no Banco de Dados
 
@@ -60,15 +56,13 @@ ao enviar esse JSON, ele é armazenado no Banco de Dados
 3 -
 PUT - {hostUrl}/careers/{object_id}
 
-requisição: 
+requisição(JSON): 
 
-{
 
 		"title": "string",
   
 		"content": "string"
   
-}
 
 Pode ser alterado apenas o "title" e o "content", ao enviar a requisição em JSON, ele busca pelo "id" do objeto e altera caso o mesmo exista no Banco de Dados.
 
