@@ -1,23 +1,22 @@
-# Como usar?
-1 - Clone o repositório na sua própria máquina.
+# How to use it?
+1 - Clone the repository on your own machine.
 
-2 - habilite sua venv com o comando "pip -m venv venv", após isso será criado um pasta com nome "venv" na raiz do seu projeto, ative o "venv/Scripts/activate usando" o comando do seu sistema operacional.
+2 - enable your venv with the command “pip -m venv venv”, after which a folder named “venv” will be created in the root of your project, activate “venv/Scripts/activate using” your operating system's command.
 
-3 - instale os requisitos presentes em requirements.txt, verifique se estão presentes com o comando "pip freeze".
+3 - install the requirements in requirements.txt, check that they are present with the “pip freeze” command.
 
-4 - após isso, execute "py manage.py runserver" para iniciar a API no seu localhost.
+4 - after that, run “py manage.py runserver” to start the API on your localhost.
 
-Bonus - Caso queira ver seu banco de dados sqlite dentro do próprio Vs Code, utilize alguma extensão, como a "SQLite Viewer"
+Bonus - If you want to view your sqlite database within Vs Code itself, use an extension such as “SQLite Viewer”.
 
 
 # EndPoints
-AVISO: Utilize algum software que faça requisições HTTP, pois essa API não possui Front-End. Como o imsomnia ou postman
+ALERT: Use software that makes HTTP requests, as this API has no Front-End. Like imsomnia or postman
 
-
-Isso é um exemplo de objeto no banco de dados dessa API(JSON):
+This is an example of an object in this API's database (JSON):
 
     
-    "id": “number primary key”, // Ele auto-incrementa conforme mais um objeto é gerado
+    "id": “number primary key”, // It auto-increments as more objects are generated
     
     "username": "string",
     
@@ -33,7 +32,7 @@ Isso é um exemplo de objeto no banco de dados dessa API(JSON):
 
 GET - "{hostUrl}/careers"
 
-return: retorna todos os items do banco de dados em JSONs
+return: returns all database items in JSONs
 
 
 
@@ -41,7 +40,7 @@ return: retorna todos os items do banco de dados em JSONs
 
 POST - "{hostUrl}/careers"
 
-requisição(JSON):
+request(JSON):
 
 
 		"username": "string",
@@ -51,14 +50,14 @@ requisição(JSON):
 		"content": "string"
   
 
-ao enviar esse JSON, ele é armazenado no Banco de Dados
+when you send this JSON, it is stored in the database
 
 
 
 3 -
 PUT - {hostUrl}/careers/{object_id}
 
-requisição(JSON): 
+request(JSON): 
 
 
 		"title": "string",
@@ -66,7 +65,7 @@ requisição(JSON):
 		"content": "string"
   
 
-Pode ser alterado apenas o "title" e o "content", ao enviar a requisição em JSON, ele busca pelo "id" do objeto e altera caso o mesmo exista no Banco de Dados.
+Only the “title” and “content” can be changed. When sending the JSON request, it searches for the object's “id” and changes it if it exists in the database.
 
 
 
@@ -74,5 +73,4 @@ Pode ser alterado apenas o "title" e o "content", ao enviar a requisição em JS
 
 DELETE - {hostUrl}/careers/{object_id}
 
-Não é necessário um body nessa requisição, ele simplesmente procura o "id" passado na URL e se existir algum objeto com esse "id", o mesmo é excluido do banco de dados.
-
+There is no need for a body in this request, it simply looks for the “id” passed in the URL and if there is an object with that “id”, it is deleted from the database.
