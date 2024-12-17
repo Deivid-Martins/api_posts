@@ -16,15 +16,15 @@ ALERT: Use software that makes HTTP requests, as this API has no Front-End. Like
 This is an example of an object in this API's database (JSON):
 
     
-    "id": “number primary key”, // It auto-increments as more objects are generated
+"id": “number primary key”, // It auto-increments as more objects are generated
     
-    "username": "string",
+"username": "string",
     
-    "created_datetime": "datetime",
+"created_datetime": "datetime",
    
-    "title": "string",
+"title": "string",
    
-    "content": "string"
+"content": "string"
     
 
 
