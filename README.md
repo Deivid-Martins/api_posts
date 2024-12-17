@@ -36,6 +36,7 @@ GET - "{hostUrl}/careers"
 return: retorna todos os items do banco de dados em JSONs
 
 
+
 2 - 
 
 POST - "{hostUrl}/careers"
@@ -53,6 +54,7 @@ requisição(JSON):
 ao enviar esse JSON, ele é armazenado no Banco de Dados
 
 
+
 3 -
 PUT - {hostUrl}/careers/{object_id}
 
@@ -65,6 +67,7 @@ requisição(JSON):
   
 
 Pode ser alterado apenas o "title" e o "content", ao enviar a requisição em JSON, ele busca pelo "id" do objeto e altera caso o mesmo exista no Banco de Dados.
+
 
 
 4 -
