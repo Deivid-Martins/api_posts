@@ -17,11 +17,17 @@ AVISO: Utilize algum software que faça requisições HTTP, pois essa API não p
 Isso é um exemplo de objeto no banco de dados dessa API:
 
 {
+    
     "id": “number primary key”, // Ele auto-incrementa conforme mais um objeto é gerado
+    
     "username": "string",
+    
     "created_datetime": "datetime",
+   
     "title": "string",
+   
     "content": "string"
+    
 }
 
 
@@ -39,9 +45,13 @@ POST - "{hostUrl}/careers"
 requisição:
 
 {
+
 		"username": "string",
+  
 		"title": "string",
+  
 		"content": "string"
+  
 }
 
 ao enviar esse JSON, ele é armazenado no Banco de Dados
@@ -53,8 +63,11 @@ PUT - {hostUrl}/careers/{object_id}
 requisição: 
 
 {
+
 		"title": "string",
+  
 		"content": "string"
+  
 }
 
 Pode ser alterado apenas o "title" e o "content", ao enviar a requisição em JSON, ele busca pelo "id" do objeto e altera caso o mesmo exista no Banco de Dados.
